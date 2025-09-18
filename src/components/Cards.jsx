@@ -1,23 +1,19 @@
 import React from "react";
+import "./styles/Cards.css";
+import contentArray from "./src/CardsContentArray";
 
 function Cards() {
-  let contentArray = [
-    { title: "Header", content: "dwdowapiodjwapdoifaw" },
-    {
-      title: "Again Header",
-      content: "ifmqweifhnweoipfnhweoifjiweoifjwepofijwe",
-    },
-  ];
-
   return (
-    <div>
-      {applicants.map(function (data) {
-        return <div>Applicant name: {data.name}</div>;
-      })}
-      <div>
-        Informationen über <p>Alkoholkonsum</p>, Risiken und
-        Präventionsstrategien.
-      </div>
+    <div className="grid">
+      {contentArray.map((data, index) => (
+        <div key={index} className="card">
+          <div className="card-head">
+            <h3>{data.title}</h3>
+            {/* <img src="" alt="" /> */}
+          </div>
+          <div>{data.content}</div>
+        </div>
+      ))}
     </div>
   );
 }
