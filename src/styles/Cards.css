@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+  gap: 2rem;
+  padding: 2rem 4rem;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  border-radius: 16px;
+  border-width: 1px;
+  border-color: #df0000e0;
+  background-color: #1e2128;
+  color: white;
+  padding: 20px;
+
+  cursor: pointer;
+}
+.card-head {
+  display: flex;
+  flex-direction: column;
+}
+.card-head-icon {
+  height: 48px;
+  width: 48px;
+}
+.card-head-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
