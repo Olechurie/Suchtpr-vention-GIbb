@@ -6,7 +6,7 @@ import iconMap from "./iconMap";
 
 function Cards() {
   return (
-    <div className="grid">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       {contentArray.map((data, index) => {
         const iconKey = data.iconSvg.replace("fa-", "");
 
@@ -19,14 +19,14 @@ function Cards() {
                 <FontAwesomeIcon
                   icon={icon}
                   size="2x"
-                  className="card-head-icon"
+                  className="card-head-icon mb-2"
                   style={{ color: index % 2 === 0 ? "#00b8d9ff" : "#5cb85cff" }}
                 />
               )}
 
-              <h3 className="card-head-title">{data.title}</h3>
+              <h3 className="card-head-title mb-5">{data.title}</h3>
             </div>
-            <div>{data.content}</div>
+            <div className="text-neutral-400">{data.content}</div>
           </div>
         );
       })}
