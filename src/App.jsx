@@ -3,10 +3,12 @@ import Cards from "./components/Cards";
 import "./styles/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { byPrefixAndName } from "./iconLoader";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
     <>
+      <NavBar button={false} />
       <div className="text-slate-50 mx-18 mt-10 mb-10 flex items-center gap-4">
         <FontAwesomeIcon
           icon={byPrefixAndName.fas["book-open"]}
