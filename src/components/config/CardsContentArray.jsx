@@ -1,8 +1,8 @@
 const contentArray = [
   {
-    title: "4-FA",
+    title: "resilienz",
     content:
-      "4-FA (4-Fluoramfetamin) ist eine synthetische Substanz aus der Gruppe der Amphetamine. Sie wirkt stimulierend und leicht empathogen, ähnlich wie MDMA, kann aber zu erhöhter Herzfrequenz und Neurotoxizität führen.",
+      "Ready to Click 4-FA (4-Fluoramfetamin) ist eine synthetische Substanz aus der Gruppe der Amphetamine. Sie wirkt stimulierend und leicht empathogen, ähnlich wie MDMA, kann aber zu erhöhter Herzfrequenz und Neurotoxizität führen.",
     iconSvg: "fa-vial",
   },
   {

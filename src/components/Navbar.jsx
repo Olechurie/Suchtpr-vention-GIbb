@@ -8,18 +8,18 @@ function NavBar({ button }) {
         <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
       </div>
       <div className="flex-1 flex justify-center space-x-8">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="text-neutral-200 hover:text-blue-500 font-medium"
         >
           Home
-        </a>
-        <a
-          href="/lexikon"
+        </Link>
+        <Link
+          to="/Lexikon"
           className="text-neutral-200 hover:text-blue-500 font-medium"
         >
           Lexikon
-        </a>
+        </Link>
       </div>
       <div className="flex-shrink-0">
         {button ? (
