@@ -3,8 +3,14 @@ import "../styles/Cards.css";
 import contentArray from "./config/CardsContentArray";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import iconMap from "./iconMap";
+import { useNavigate } from "react-router-dom";
 
 function Cards() {
+  const navigate = useNavigate();
+  function handleCardClick(title) {
+    navigate("/page?tab=" + title);
+  }
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       {contentArray.map((data, index) => {
@@ -13,7 +19,11 @@ function Cards() {
         const icon = iconMap[iconKey];
 
         return (
-          <div key={index} className="card">
+          <div
+            key={index}
+            className="card"
+            onClick={() => handleCardClick(data.title)}
+          >
             <div className="card-head">
               {icon && (
                 <FontAwesomeIcon

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar({ button }) {
   return (
@@ -22,12 +23,12 @@ function NavBar({ button }) {
       </div>
       <div className="flex-shrink-0">
         {button ? (
-          <a
-            href="/lexikon"
+          <Link
+            to={"/"}
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
           >
             Zurück zum Lexikon
-          </a>
+          </Link>
         ) : null}
       </div>
     </nav>
