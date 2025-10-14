@@ -6,8 +6,6 @@ import iconMap from "./iconMap";
 import { useNavigate } from "react-router-dom";
 
 function Cards() {
-  const [PreviousPage, setPreviousPage] = React.useState(false);
-  const [NextPage, setNextPage] = React.useState(true);
   const [site, setSite] = React.useState(0); // Start bei 0
   const cardsPerPage = 15;
 

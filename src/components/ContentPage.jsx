@@ -4,6 +4,7 @@ import { lexikonPages } from "./lexikonPages";
 import NavBar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { byPrefixAndName } from "../iconLoader";
+import Footer from "./Footer.jsx";
 
 function ContentPage() {
   const [searchParams] = useSearchParams();
@@ -23,7 +24,7 @@ function ContentPage() {
 
   if (!currentPage) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col">
         <NavBar button={true} />
         <div className="bg-[#1e2128] p-10 m-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
           <div className="text-neutral-300 flex items-center gap-4 text-center">
@@ -43,14 +44,15 @@ function ContentPage() {
             Bitte wähle eine Kategorie auf der Startseite aus.
           </p>
         </div>
-      </>
+        <Footer />
+      </div>
     );
   }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <NavBar button={true} />
-      <div className="p-8 text-neutral-100 px-10 ml-10">
+      <main className="flex-1 p-8 text-neutral-100 px-10 ml-10">
         <div className="flex items-center gap-3 mb-8">
           <FontAwesomeIcon
             icon={currentPage.icon}
@@ -67,8 +69,9 @@ function ContentPage() {
             </p>
           </section>
         ))}
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -4,10 +4,11 @@ import "./styles/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { byPrefixAndName } from "./iconLoader";
 import NavBar from "./components/Navbar";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <NavBar button={false} />
       <div className="text-slate-50 mx-18 mt-10 mb-10 flex items-center gap-4">
         <FontAwesomeIcon
@@ -18,9 +19,11 @@ function App() {
         />
         <h1 className="text-[48px] font-bold">Lexikon</h1>
       </div>
-
       <Cards />
-    </>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
 
