@@ -5,7 +5,7 @@ function NavBar({ button }) {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-black shadow">
       <div className="flex-shrink-0">
-        <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+        <img src="/icon.png" alt="Logo" className="h-12 w-auto" />
       </div>
       <div className="flex-1 flex justify-center space-x-8">
         <Link
